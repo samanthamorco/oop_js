@@ -9,5 +9,19 @@ function createAccount() {
   openingBalance.value = "";
 }
 
+var clickBoxOne = (function() {
+  var colors = ["blue", "red", "green"];
+  return function() {
+    return document.getElementById("boxOne").style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+  }
+})();
+
+var clickBoxTwo = (function() {
+  var colors = ["purple", "black", "yellow"];
+  return function() {
+    return document.getElementById("boxTwo").style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+  }
+})();
+
 window.accounts = accounts;
 
