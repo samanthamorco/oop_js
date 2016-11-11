@@ -11,15 +11,19 @@ function createAccount() {
 
 var clickBoxOne = (function() {
   var colors = ["blue", "red", "green"];
+  var index = 0;
   return function() {
-    return document.getElementById("boxOne").style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+    return document.getElementById("boxOne").style.backgroundColor = colors[index%3];
+    index++;
   }
 })();
 
 var clickBoxTwo = (function() {
   var colors = ["purple", "black", "yellow"];
+  var index = 0;
   return function() {
-    return document.getElementById("boxTwo").style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+    return document.getElementById("boxTwo").style.backgroundColor = colors[index%3];
+    index++;
   }
 })();
 
